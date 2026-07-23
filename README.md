@@ -69,7 +69,7 @@ Após o recebimento da solicitação, é necessário registrar essas informaçõ
 ## Regras de Negócio Automatizadas
 A automação foi desenvolvida considerando diversas validações operacionais e regulatórias.
 
-## Distribuição dos Rateios
+### Distribuição dos Rateios
 O sistema deve garantir que:
 - Cada beneficiária possua um percentual de participação válido.
 - O rateio seja distribuído entre todas as unidades cadastradas.
@@ -77,7 +77,7 @@ O sistema deve garantir que:
 - Limite de Beneficiárias
 - Registros acima do limite operacional definido para processamento automático são direcionados para tratamento manual.
 
-## Atualização de Cadastros Existentes
+### Atualização de Cadastros Existentes
 Antes da inclusão de um novo rateio, o sistema deve verificar se existem beneficiárias previamente cadastradas.
 Quando identificadas:
 - As beneficiárias existentes são removidas.
@@ -85,7 +85,7 @@ Quando identificadas:
 - O cadastro é salvo novamente.
 Esse procedimento evita inconsistências entre rateios antigos e novos.
 
-## Validação das Informações
+### Validação das Informações
 O robô verifica:
 - Existência de dados obrigatórios.
 - Correspondência entre solicitação e sistema corporativo.
