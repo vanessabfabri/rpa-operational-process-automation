@@ -126,7 +126,7 @@ Portal Web ↓ Web Scraping ↓ Download de Arquivos ↓ Tratamento e Consolida�
 
 # 💻 Exemplo de Código 
 ## Tratamento de DataFrames 
-```python df_final = df_web.merge( df_sistema, on="protocolo", how="inner" )´´´
+python df_final = df_web.merge( df_sistema, on="protocolo", how="inner" )
 
 # 📈 Competências Demonstradas
 - Automação de Processos (RPA)
