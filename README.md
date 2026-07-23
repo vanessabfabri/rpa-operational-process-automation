@@ -1,4 +1,5 @@
 # rpa-operational-process-automation
+# RPA: Cadastro de Autoconsumo Remoto
 
 # 🤖 Automação RPA de Processo Operacional (Python + SAP + Web Scraping)
 
@@ -33,6 +34,74 @@ O fluxo inclui:
 
 ---
 
+# 📊 Resultados Obtidos 
+## Indicadores do Projeto 
+| Indicador | Resultado | 
+|------------|------------| 
+| Volume tratado em testes | 1.880 registros | 
+| Média diária | 117 registros | 
+| Redução de tempo | 55% | 
+| Tempo manual | ~3 minutos por registro | 
+| Tempo automatizado | ~1 minuto por registro | 
+| Tempo médio atual | 89 segundos por registro | 
+| Redução do TMA | 19 dias → D+1 | 
+| Capacidade operacional | Dobrada | 
+
+---
+
+# 🏢 Contexto de Negócio
+O que é Autoconsumo Remoto?
+
+O Autoconsumo Remoto é uma modalidade da Micro e Minigeração Distribuída na qual a energia gerada por uma unidade consumidora geradora pode ser compartilhada com outras unidades consumidoras pertencentes ao mesmo titular.
+
+Nessa modalidade, a energia excedente produzida pela instalação geradora é distribuída entre unidades beneficiárias de acordo com percentuais previamente definidos pelo cliente.
+
+# Processo Operacional
+
+O processo inicia quando o cliente realiza uma solicitação através do portal de atendimento.
+
+Nessa solicitação são informados:
+- Unidade consumidora geradora
+- Unidades consumidoras beneficiárias
+- Percentual de rateio destinado a cada beneficiária
+
+Após o recebimento da solicitação, é necessário registrar essas informações no sistema corporativo para que a compensação de créditos de energia seja realizada corretamente.
+
+# Regras de Negócio Automatizadas
+A automação foi desenvolvida considerando diversas validações operacionais e regulatórias.
+
+# Distribuição dos Rateios
+O sistema deve garantir que:
+- Cada beneficiária possua um percentual de participação válido.
+- O rateio seja distribuído entre todas as unidades cadastradas.
+- A instalação geradora permaneça corretamente vinculada às beneficiárias.
+- Limite de Beneficiárias
+- Registros acima do limite operacional definido para processamento automático são direcionados para tratamento manual.
+
+# Atualização de Cadastros Existentes
+Antes da inclusão de um novo rateio, o sistema deve verificar se existem beneficiárias previamente cadastradas.
+Quando identificadas:
+- As beneficiárias existentes são removidas.
+- O novo rateio é incluído.
+- O cadastro é salvo novamente.
+Esse procedimento evita inconsistências entre rateios antigos e novos.
+
+# Validação das Informações
+O robô verifica:
+- Existência de dados obrigatórios.
+- Correspondência entre solicitação e sistema corporativo.
+- Disponibilidade dos arquivos necessários.
+- Consistência dos percentuais informados.
+- Encerramento do Processo
+
+Após o cadastro completo:
+- As medidas operacionais são executadas automaticamente.
+- O registro é encerrado.
+- Evidências são registradas.
+- O cliente recebe uma comunicação automática de conclusão.
+
+---
+
 # 🛠 Tecnologias Utilizadas
 
 - Python
@@ -57,7 +126,7 @@ Portal Web ↓ Web Scraping ↓ Download de Arquivos ↓ Tratamento e Consolida�
 # ⚙️ Principais Funcionalidades 
 ## Extração de Dados 
 - Acesso automatizado ao portal
--  Download automático dos arquivos individuais
+- Download automático dos arquivos individuais
 - Consolidação das informações recebidas
   
 ## Tratamento de Dados 
@@ -85,24 +154,10 @@ Portal Web ↓ Web Scraping ↓ Download de Arquivos ↓ Tratamento e Consolida�
 
 --- 
 
-# 📊 Resultados Obtidos 
-## Indicadores do Projeto 
-| Indicador | Resultado | 
-|------------|------------| 
-| Volume tratado em testes | 1.880 registros | 
-| Média diária | 117 registros | 
-| Redução de tempo | 55% | 
-| Tempo manual | ~3 minutos por registro | 
-| Tempo automatizado | ~1 minuto por registro | 
-| Tempo médio atual | 89 segundos por registro | 
-| Redução do TMA | 19 dias → D+1 | 
-| Capacidade operacional | Dobrada | 
-
---- 
-
 # 🚀 Impacto da Automação 
 ### Antes 
 - Processo totalmente manual
+- Download individual dos arquivos
 - Alto risco de retrabalho
 - Dependência operacional elevada
 - Possibilidade de atraso nos prazos
@@ -113,6 +168,7 @@ Portal Web ↓ Web Scraping ↓ Download de Arquivos ↓ Tratamento e Consolida�
 - Padronização do processo
 - Maior confiabilidade operacional
 - Capacidade ampliada sem aumento de equipe
+- Liberação da equipe para atividades analíticas e estratégicas
 
 --- 
 
@@ -123,10 +179,6 @@ Portal Web ↓ Web Scraping ↓ Download de Arquivos ↓ Tratamento e Consolida�
 - Consolidação de Múltiplas Fontes Integração de informações provenientes de portais web, arquivos CSV, planilhas Excel e sistema corporativo. 
 
 --- 
-
-# 💻 Exemplo de Código 
-## Tratamento de DataFrames 
-python df_final = df_web.merge( df_sistema, on="protocolo", how="inner" )
 
 # 📈 Competências Demonstradas
 - Automação de Processos (RPA)
@@ -156,14 +208,6 @@ Inserir dashboard com dados anonimizados.
 assets/dashboard.png
 
 ---
-
-# 📚 Aprendizados
-Este projeto permitiu aprofundar conhecimentos em:
-- Automação corporativa
-- Integração entre sistemas heterogêneos
-- Tratamento de grandes volumes de dados
-- Desenvolvimento de soluções robustas e escaláveis
-- Observabilidade e monitoramento de processos automatizados
 
 # ⚠️ Observação
 Por questões de confidencialidade e propriedade intelectual, o código-fonte completo e detalhes específicos de negócio não são disponibilizados publicamente.
