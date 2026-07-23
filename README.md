@@ -157,7 +157,7 @@ assets/dashboard.png
 
 ---
 
-#📚 Aprendizados
+# 📚 Aprendizados
 Este projeto permitiu aprofundar conhecimentos em:
 - Automação corporativa
 - Integração entre sistemas heterogêneos
@@ -165,6 +165,6 @@ Este projeto permitiu aprofundar conhecimentos em:
 - Desenvolvimento de soluções robustas e escaláveis
 - Observabilidade e monitoramento de processos automatizados
 
-#⚠️ Observação
+# ⚠️ Observação
 Por questões de confidencialidade e propriedade intelectual, o código-fonte completo e detalhes específicos de negócio não são disponibilizados publicamente.
 O projeto é apresentado com finalidade demonstrativa, evidenciando a arquitetura, tecnologias empregadas, desafios enfrentados e resultados obtidos.
